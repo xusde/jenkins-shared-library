@@ -12,7 +12,7 @@ def call(String status) {
     }
 
     slackSend(
-            channel: ${target_slack_chanel},
+            channel: target_slack_chanel,
             color: color,
             message: """
             *Build ${status}* ${emoji}
