@@ -2,7 +2,7 @@
 def call(String status) {
     def color = 'danger'
     def emoji = ':x:'
-
+    def target_slack_chanel = '#slack-notifications'
     if (status == 'success') {
         color = 'good'
         emoji = ':white_check_mark:'
@@ -12,7 +12,7 @@ def call(String status) {
     }
 
     slackSend(
-            channel: '#jenkins-slack',
+            channel: ${target_slack_chanel},
             color: color,
             message: """
             *Build ${status}* ${emoji}
