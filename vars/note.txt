@@ -1,2 +1,3 @@
 file
 add a note line
+3rd line
